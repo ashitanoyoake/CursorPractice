@@ -3,25 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ダイスケ | 自己紹介</title>
+  <title>ダイスケ | ホームページ</title>
 </head>
-<body>
+<body id="top">
   <header>
     <h1>ダイスケ</h1>
-    <p>はじめまして。自己紹介ページへようこそ。</p>
+    <p>はじめまして。ダイスケのホームページへようこそ。</p>
   </header>
 
+  <nav>
+    <h2>メニュー</h2>
+    <ul>
+      <li><a href="#about">自己紹介</a></li>
+      <li><a href="#hobby">趣味</a></li>
+      <li><a href="#movie">好きな映画</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <hr>
+
   <main>
-    <section>
+    <section id="about">
       <h2>自己紹介</h2>
       <p>
         ダイスケと申します。映画やカメラ、植物、そしてAIの世界に日々触れながら、
         好きなことを楽しんでいます。
       </p>
+      <p>このページでは、私の趣味や好きな映画を紹介しています。</p>
     </section>
 
-    <section>
+    <hr>
+
+    <section id="hobby">
       <h2>趣味</h2>
+      <p>私の主な趣味は次のとおりです。</p>
       <ul>
         <li>映画鑑賞</li>
         <li>カメラ</li>
@@ -30,14 +46,46 @@
       </ul>
     </section>
 
-    <section>
+    <hr>
+
+    <section id="movie">
       <h2>好きな映画</h2>
-      <p>・『回路』</p>
+      <p>特にお気に入りの映画を紹介します。</p>
+      <ul>
+        <li>『回路』</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+      <p>ご連絡は以下のフォームよりお送りください。（※これはダミーです）</p>
+      <form action="#" method="post">
+        <p>
+          <label for="name">お名前：</label><br>
+          <input type="text" id="name" name="name">
+        </p>
+        <p>
+          <label for="email">メールアドレス：</label><br>
+          <input type="email" id="email" name="email">
+        </p>
+        <p>
+          <label for="message">メッセージ：</label><br>
+          <textarea id="message" name="message" rows="4" cols="40"></textarea>
+        </p>
+        <p>
+          <button type="submit">送信する</button>
+        </p>
+      </form>
     </section>
   </main>
 
+  <hr>
+
   <footer>
     <p>© 2026 ダイスケ</p>
+    <p><a href="#top">ページの先頭へ戻る</a></p>
   </footer>
 </body>
 </html>
