@@ -43,6 +43,23 @@ header p {
   opacity: 0.9;
 }
 
+/* ヘッダーのボタン */
+header button {
+  margin-top: 1rem;
+  background-color: #ffffff;
+  color: #2563eb;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #eff6ff;
+}
+
 
 /* ========================================
    ナビゲーション（横並び）
