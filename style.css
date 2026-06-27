@@ -139,26 +139,13 @@ figure {
 }
 
 figure img {
-  max-width: 200px;
-  border-radius: 50%; /* 丸型のプロフィール画像 */
-  border: 3px solid #eff6ff;
-}
-
-/* 画像がないときの代わり表示 */
-.profile-placeholder {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 200px;
   height: 200px;
-  margin: 0;
-  padding: 1rem;
-  background-color: #eff6ff;
-  border: 3px solid #dbeafe;
+  margin: 0 auto;
+  object-fit: cover; /* 画像の比率を保ったまま枠に収める */
   border-radius: 50%;
-  color: #2563eb;
-  font-size: 0.9rem;
-  box-sizing: border-box;
+  border: 3px solid #eff6ff;
 }
 
 figcaption {
