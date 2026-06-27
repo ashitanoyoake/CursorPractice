@@ -144,6 +144,23 @@ figure img {
   border: 3px solid #eff6ff;
 }
 
+/* 画像がないときの代わり表示 */
+.profile-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  padding: 1rem;
+  background-color: #eff6ff;
+  border: 3px solid #dbeafe;
+  border-radius: 50%;
+  color: #2563eb;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
 figcaption {
   margin-top: 0.5rem;
   color: #777;
