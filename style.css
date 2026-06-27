@@ -1,0 +1,249 @@
+/* ========================================
+   全体の基本設定
+   ======================================== */
+
+/* ページ全体 */
+body {
+  margin: 0;
+  background-color: #f0f2f5; /* 明るいグレー */
+  color: #333;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.7;
+}
+
+/* リンクの基本色 */
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   ヘッダー（青系）
+   ======================================== */
+
+header {
+  background-color: #2563eb;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+
+/* ========================================
+   ナビゲーション（横並び）
+   ======================================== */
+
+nav {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-bottom: 1px solid #dde1e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #eff6ff;
+  text-decoration: none;
+}
+
+
+/* ========================================
+   メインコンテンツ（読みやすい幅）
+   ======================================== */
+
+main {
+  max-width: 720px; /* 本文が読みやすい幅 */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* セクション間の区切り線は非表示（カードで区切るため） */
+main hr {
+  display: none;
+}
+
+
+/* ========================================
+   各セクション（カード風）
+   ======================================== */
+
+section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  margin-top: 0;
+  color: #2563eb;
+  border-bottom: 2px solid #eff6ff;
+  padding-bottom: 0.5rem;
+}
+
+section h3 {
+  color: #1e40af;
+  margin-bottom: 0.3rem;
+}
+
+
+/* ========================================
+   プロフィール画像
+   ======================================== */
+
+figure {
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+figure img {
+  max-width: 200px;
+  border-radius: 50%; /* 丸型のプロフィール画像 */
+  border: 3px solid #eff6ff;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+
+/* ========================================
+   おすすめ作品（記事カード）
+   ======================================== */
+
+article {
+  background-color: #f8fafc;
+  border-left: 4px solid #2563eb;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ========================================
+   お問い合わせフォーム
+   ======================================== */
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* paddingを含めた幅計算 */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #eff6ff;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+/* 送信ボタン */
+button[type="submit"] {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+
+/* ========================================
+   フッター
+   ======================================== */
+
+body > hr {
+  display: none;
+}
+
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid #dde1e6;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+
+/* ========================================
+   リスト
+   ======================================== */
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
