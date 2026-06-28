@@ -2,18 +2,16 @@
    全体の基本設定
    ======================================== */
 
-/* ページ全体 */
 body {
   margin: 0;
-  background-color: #f0f2f5; /* 明るいグレー */
+  background-color: #eceff1; /* 明るいグレー */
   color: #333;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   line-height: 1.7;
 }
 
-/* リンクの基本色 */
 a {
-  color: #2563eb;
+  color: #1565c0;
   text-decoration: none;
 }
 
@@ -23,31 +21,31 @@ a:hover {
 
 
 /* ========================================
-   ヘッダー（青系）
+   ヘッダー（ダーク系）
    ======================================== */
 
 header {
-  background-color: #2563eb;
+  background-color: #1a1a2e;
   color: #ffffff;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
 }
 
 header h1 {
   margin: 0 0 0.5rem;
   font-size: 2rem;
+  letter-spacing: 0.05em;
 }
 
 header p {
   margin: 0;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
-/* ヘッダーのボタン */
 header button {
-  margin-top: 1rem;
-  background-color: #ffffff;
-  color: #2563eb;
+  margin-top: 1.2rem;
+  background-color: #c9a227; /* ゴールド系アクセント */
+  color: #1a1a2e;
   border: none;
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
@@ -57,7 +55,7 @@ header button {
 }
 
 header button:hover {
-  background-color: #eff6ff;
+  background-color: #ddb52e;
 }
 
 
@@ -68,7 +66,7 @@ header button:hover {
 nav {
   background-color: #ffffff;
   padding: 1rem;
-  border-bottom: 1px solid #dde1e6;
+  border-bottom: 1px solid #cfd8dc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,27 +93,26 @@ nav a {
   display: block;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
-  color: #2563eb;
+  color: #1565c0;
   font-weight: bold;
 }
 
 nav a:hover {
-  background-color: #eff6ff;
+  background-color: #e3f2fd;
   text-decoration: none;
 }
 
 
 /* ========================================
-   メインコンテンツ（読みやすい幅）
+   メインコンテンツ
    ======================================== */
 
 main {
-  max-width: 720px; /* 本文が読みやすい幅 */
+  max-width: 720px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
-/* セクション間の区切り線は非表示（カードで区切るため） */
 main hr {
   display: none;
 }
@@ -135,19 +132,19 @@ section {
 
 section h2 {
   margin-top: 0;
-  color: #2563eb;
-  border-bottom: 2px solid #eff6ff;
+  color: #1a1a2e;
+  border-bottom: 2px solid #c9a227;
   padding-bottom: 0.5rem;
 }
 
 section h3 {
-  color: #1e40af;
+  color: #1565c0;
   margin-bottom: 0.3rem;
 }
 
 
 /* ========================================
-   プロフィール画像
+   施工イメージ画像
    ======================================== */
 
 figure {
@@ -157,28 +154,23 @@ figure {
 
 figure img {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  max-width: 600px;
+  height: 220px;
   margin: 0 auto;
-  object-fit: cover; /* 画像の比率を保ったまま枠に収める */
-  border-radius: 50%;
-  border: 3px solid #eff6ff;
-}
-
-figcaption {
-  margin-top: 0.5rem;
-  color: #777;
-  font-size: 0.9rem;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #cfd8dc;
 }
 
 
 /* ========================================
-   おすすめ作品（記事カード）
+   施工事例（記事カード）
    ======================================== */
 
 article {
-  background-color: #f8fafc;
-  border-left: 4px solid #2563eb;
+  background-color: #f5f7fa;
+  border-left: 4px solid #c9a227;
   border-radius: 4px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -202,15 +194,15 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-  box-sizing: border-box; /* paddingを含めた幅計算 */
+  box-sizing: border-box;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
   outline: none;
-  border-color: #2563eb;
-  box-shadow: 0 0 0 2px #eff6ff;
+  border-color: #1565c0;
+  box-shadow: 0 0 0 2px #e3f2fd;
 }
 
 label {
@@ -218,9 +210,8 @@ label {
   color: #555;
 }
 
-/* 送信ボタン */
 button[type="submit"] {
-  background-color: #2563eb;
+  background-color: #1565c0;
   color: #ffffff;
   border: none;
   padding: 0.7rem 2rem;
@@ -231,7 +222,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #1d4ed8;
+  background-color: #0d47a1;
 }
 
 
@@ -244,16 +235,19 @@ body > hr {
 }
 
 footer {
-  background-color: #ffffff;
+  background-color: #1a1a2e;
+  color: #b0bec5;
   text-align: center;
   padding: 1.5rem 1rem;
-  border-top: 1px solid #dde1e6;
-  color: #777;
   font-size: 0.9rem;
 }
 
 footer p {
   margin: 0.3rem 0;
+}
+
+footer a {
+  color: #c9a227;
 }
 
 
