@@ -11,8 +11,8 @@
   --text-muted: #888;
   --border: #f0f0f0;
   --placeholder-bg: #f5f5f5;
-  --content-max: 900px;
-  --layout-max: 1080px;
+  --content-max: 900px;  /* 本文コンテンツの最大幅 */
+  --layout-max: 1080px;  /* ヘッダーの最大幅 */
 }
 
 body {
@@ -34,6 +34,7 @@ a:hover {
   color: var(--accent);
 }
 
+/* Zen Maru Gothic（見出し・ナビ・ロゴのみ） */
 .site-logo span,
 nav a,
 .page-title,
@@ -106,81 +107,42 @@ nav a.nav-current {
 
 
 /* ========================================
-   プレースホルダー
+   フッター
    ======================================== */
 
-.placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--placeholder-bg);
-  color: #ccc;
+.site-footer {
+  text-align: center;
+  padding: 2.5rem 2rem 3.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-site-name {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: #aaa;
+}
+
+.footer-copy {
+  margin: 0;
   font-size: 0.75rem;
-  box-sizing: border-box;
-}
-
-.logo-placeholder {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-}
-
-.main-visual-placeholder {
-  width: 100%;
-  height: 320px;
-}
-
-.deco-placeholder {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  margin: 0 auto;
-}
-
-.thumb-placeholder {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-}
-
-.work-placeholder,
-.instagram-placeholder {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-}
-
-.multi-placeholder {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  font-size: 0.7rem;
-  color: #bbb;
-  border: 1px dashed #ddd;
-  background-color: #fafafa;
-}
-
-.profile-image-placeholder {
-  width: 200px;
-  height: 200px;
-  flex-shrink: 0;
+  color: #ccc;
+  letter-spacing: 0.08em;
 }
 
 
 /* ========================================
-   共通レイアウト
+   レイアウト
    ======================================== */
 
 main {
   padding-bottom: 5rem;
 }
 
-.page-main {
-  padding-top: 2.5rem;
+.page-main.home-page {
+  padding-top: 2rem;
 }
 
-.page-main:not(.home-page) {
-  padding-top: 3.5rem;
-}
-
-/* 本文コンテンツ共通幅（ヘッダー・フッターは --layout-max のまま） */
 .content-inner {
   max-width: var(--content-max);
   margin-left: auto;
@@ -216,12 +178,17 @@ main {
 
 
 /* ========================================
-   ページタイトル（下層ページ）
+   下層ページ：ページヘッダー
    ======================================== */
 
 .page-header {
   margin-bottom: 2rem;
   text-align: center;
+}
+
+.page-deco {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .page-title {
@@ -235,8 +202,55 @@ main {
   color: var(--text);
 }
 
-.page-deco {
-  margin-bottom: 1.5rem;
+
+/* ========================================
+   プレースホルダー
+   ======================================== */
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--placeholder-bg);
+  color: #ccc;
+  font-size: 0.75rem;
+  box-sizing: border-box;
+}
+
+.logo-placeholder {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.deco-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.thumb-placeholder,
+.work-placeholder,
+.instagram-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.multi-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  font-size: 0.7rem;
+  color: #bbb;
+  border: 1px dashed #ddd;
+  background-color: #fafafa;
+}
+
+.guide-icon-placeholder {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
 }
 
 
@@ -244,11 +258,6 @@ main {
    ホーム
    ======================================== */
 
-.home-page {
-  padding-top: 2rem;
-}
-
-/* ① メインビジュアル */
 .home-mv {
   margin-bottom: 2.5rem;
 }
@@ -264,7 +273,6 @@ main {
   display: block;
 }
 
-/* プロフィール詳細 */
 .home-profile-detail {
   margin-bottom: 4rem;
 }
@@ -293,7 +301,6 @@ main {
   margin-bottom: 0;
 }
 
-/* ② サイト案内カード */
 .home-guide {
   margin-bottom: 5rem;
 }
@@ -321,13 +328,6 @@ main {
   background-color: #fafafa;
 }
 
-.guide-icon-placeholder {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 1.2rem;
-  border-radius: 50%;
-}
-
 .guide-card-title {
   margin: 0 0 0.6rem;
   font-size: 0.92rem;
@@ -347,15 +347,10 @@ main {
   color: var(--accent);
 }
 
-/* ③〜⑤ コンテンツセクション */
 .home-sections {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-}
-
-.home-section {
-  width: 100%;
 }
 
 .home-blog-list li:last-child {
@@ -393,24 +388,7 @@ main {
 
 
 /* ========================================
-   プロフィール
-   ======================================== */
-
-.profile-row {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.profile-text p {
-  margin: 0 0 1.2rem;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-
-/* ========================================
-   作品ギャラリー
+   Instagram ギャラリー
    ======================================== */
 
 .gallery {
@@ -567,35 +545,12 @@ main {
 
 
 /* ========================================
-   フッター
-   ======================================== */
-
-.site-footer {
-  text-align: center;
-  padding: 2.5rem 2rem 3.5rem;
-  border-top: 1px solid var(--border);
-}
-
-.footer-site-name {
-  margin: 0 0 0.4rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  color: #aaa;
-}
-
-.footer-copy {
-  margin: 0;
-  font-size: 0.75rem;
-  color: #ccc;
-  letter-spacing: 0.08em;
-}
-
-
-/* ========================================
-   スマホ対応
+   スマホ対応（768px以下）
    ======================================== */
 
 @media (max-width: 768px) {
+
+  /* --- ヘッダー・ナビ --- */
   .site-header {
     flex-direction: column;
     align-items: flex-start;
@@ -642,16 +597,14 @@ main {
     letter-spacing: 0.06em;
   }
 
+  /* --- ホーム：表示順の並び替え --- */
   body.home-page-body {
     display: flex;
     flex-direction: column;
   }
 
+  body.home-page-body > .site-header,
   body.home-page-body > .page-main.home-page {
-    display: contents;
-  }
-
-  body.home-page-body > .site-header {
     display: contents;
   }
 
@@ -678,6 +631,7 @@ main {
     margin: 0 auto;
   }
 
+  /* display:contents により main の .content-inner が効かないため再適用 */
   body.home-page-body .home-profile-detail,
   body.home-page-body .home-guide,
   body.home-page-body .home-sections {
@@ -695,17 +649,13 @@ main {
     order: 5;
   }
 
-  .deco-placeholder {
-    width: 120px;
-    height: 120px;
-  }
-
-  .home-page {
-    padding-top: 0;
-  }
-
   body.home-page-body .home-profile-detail {
     padding-top: 1.5rem;
+  }
+
+  /* --- ホーム：余白調整 --- */
+  .page-main.home-page {
+    padding-top: 0;
   }
 
   .home-mv {
@@ -733,6 +683,12 @@ main {
     gap: 3.5rem;
   }
 
+  /* --- 共通 --- */
+  .deco-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
   .section-heading {
     font-size: 0.9rem;
   }
@@ -748,14 +704,9 @@ main {
     gap: 0.8rem;
   }
 
-  .profile-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
   .works-history-list,
   .gallery-instagram {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
