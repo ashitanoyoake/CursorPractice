@@ -273,6 +273,26 @@ main {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.home-works-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.home-works-item h3 {
+  margin: 0.8rem 0 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.home-works-item p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
 
 /* ========================================
    プロフィール
@@ -306,7 +326,7 @@ main {
 
 
 /* ========================================
-   お仕事履歴
+   お仕事
    ======================================== */
 
 .works-history-list {
@@ -504,6 +524,10 @@ main {
 
   .thumb-row {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-works-list {
+    grid-template-columns: 1fr;
   }
 
   .profile-row {
