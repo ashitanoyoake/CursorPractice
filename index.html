@@ -3,235 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Illustration Portfolio</title>
+  <title>Illustration Portfolio | ホーム</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body id="top">
+<body>
 
   <div class="site-header">
-    <a href="#home" class="site-logo">
+    <a href="index.html" class="site-logo">
       <div class="placeholder logo-placeholder">ロゴ予定</div>
       <span>Illustration Portfolio</span>
     </a>
     <nav>
       <ul>
-        <li><a href="#home">ホーム</a></li>
-        <li><a href="#profile">プロフィール</a></li>
-        <li><a href="#new-works">新着作品</a></li>
-        <li><a href="#instagram">Instagram作品</a></li>
-        <li><a href="#blog">ブログ</a></li>
-        <li><a href="#works-history">お仕事履歴</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="index.html" class="nav-current">ホーム</a></li>
+        <li><a href="profile.html">プロフィール</a></li>
+        <li><a href="instagram.html">Instagram作品</a></li>
+        <li><a href="works.html">お仕事履歴</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
       </ul>
     </nav>
   </div>
 
-  <main>
+  <main class="section-wide">
 
-    <!-- ホーム（入口） -->
-    <section id="home" class="page-section page-home section-wide">
-      <div class="home-hero">
-        <div class="placeholder main-visual-placeholder">メインイラスト予定</div>
-      </div>
+    <div class="home-hero">
+      <div class="placeholder main-visual-placeholder">メインイラスト予定</div>
+    </div>
 
-      <div class="home-block home-profile">
-        <h2 class="section-heading">プロフィール</h2>
-        <div class="home-profile-layout">
-          <div class="placeholder profile-placeholder">プロフィール画像予定</div>
-          <div class="home-profile-text">
-            <p class="profile-name">イラストレーター</p>
-            <p>
-              書籍・Web・グッズなど幅広い媒体で活動しています。
-              やさしいタッチとストーリー性のある表現を大切にしています。
-            </p>
-            <p class="section-link"><a href="#profile">プロフィールを見る →</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="home-block home-new-works">
-        <h2 class="section-heading">新着作品</h2>
-        <div class="gallery gallery-preview">
-          <div class="placeholder work-placeholder">作品画像予定</div>
-          <div class="placeholder work-placeholder">作品画像予定</div>
-          <div class="placeholder work-placeholder">作品画像予定</div>
-        </div>
-        <p class="section-link"><a href="#new-works">新着作品をもっと見る →</a></p>
-      </div>
-
-      <div class="home-block home-instagram">
-        <h2 class="section-heading">Instagram</h2>
-        <p class="section-lead">最新の投稿をピックアップしています。</p>
-        <div class="instagram-row">
-          <div class="placeholder instagram-placeholder">作品画像予定</div>
-          <div class="placeholder instagram-placeholder">作品画像予定</div>
-          <div class="placeholder instagram-placeholder">作品画像予定</div>
-        </div>
-        <p class="section-link">
-          <a href="#instagram">Instagram作品をもっと見る →</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- プロフィール -->
-    <section id="profile" class="page-section page-profile section-narrow">
+    <div class="home-block home-profile">
       <h2 class="section-heading">プロフィール</h2>
-      <div class="profile-layout">
+      <div class="home-profile-layout">
         <div class="placeholder profile-placeholder">プロフィール画像予定</div>
-        <div class="profile-text">
+        <div class="home-profile-text">
           <p class="profile-name">イラストレーター</p>
           <p>
             書籍・Web・グッズなど幅広い媒体で活動しています。
             やさしいタッチとストーリー性のある表現を大切にしています。
           </p>
-          <p>
-            日常の小さな出来事や、物語の世界観をテーマにしたイラスト制作を中心に、
-            オリジナル作品の発表や展示参加も行っています。
-          </p>
+          <p class="section-link"><a href="profile.html">プロフィールを見る →</a></p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- 新着作品 -->
-    <section id="new-works" class="page-section page-new-works section-wide">
+    <div class="home-block home-new-works">
       <h2 class="section-heading">新着作品</h2>
       <p class="section-lead">最近公開・制作したイラスト作品です。</p>
-      <div class="gallery gallery-works">
-        <div class="placeholder work-placeholder">作品画像予定</div>
-        <div class="placeholder work-placeholder">作品画像予定</div>
-        <div class="placeholder work-placeholder">作品画像予定</div>
-        <div class="placeholder work-placeholder">作品画像予定</div>
-        <div class="placeholder work-placeholder">作品画像予定</div>
+      <div class="gallery gallery-preview">
         <div class="placeholder work-placeholder">作品画像予定</div>
         <div class="placeholder work-placeholder">作品画像予定</div>
         <div class="placeholder work-placeholder">作品画像予定</div>
       </div>
-    </section>
+    </div>
 
-    <!-- Instagram作品 -->
-    <section id="instagram" class="page-section page-instagram section-wide">
-      <h2 class="section-heading">Instagram作品</h2>
-      <p class="section-lead">Instagram で公開している作品の一覧です。</p>
-      <div class="gallery gallery-instagram">
-        <div class="instagram-post">
-          <div class="placeholder instagram-placeholder">作品画像予定</div>
-        </div>
-        <div class="instagram-post">
-          <div class="placeholder instagram-placeholder">作品画像予定</div>
-        </div>
-        <div class="instagram-post instagram-post-multi">
-          <div class="placeholder multi-placeholder">複数枚投稿予定</div>
-        </div>
-        <div class="instagram-post">
-          <div class="placeholder instagram-placeholder">作品画像予定</div>
-        </div>
-        <div class="instagram-post instagram-post-multi">
-          <div class="placeholder multi-placeholder">複数枚投稿予定</div>
-        </div>
-        <div class="instagram-post">
-          <div class="placeholder instagram-placeholder">作品画像予定</div>
-        </div>
-        <div class="instagram-post">
-          <div class="placeholder instagram-placeholder">作品画像予定</div>
-        </div>
-        <div class="instagram-post instagram-post-multi">
-          <div class="placeholder multi-placeholder">複数枚投稿予定</div>
-        </div>
-        <div class="instagram-post">
-          <div class="placeholder instagram-placeholder">作品画像予定</div>
-        </div>
+    <div class="home-block home-instagram">
+      <h2 class="section-heading">Instagram</h2>
+      <p class="section-lead">最新の投稿をピックアップしています。</p>
+      <div class="instagram-row">
+        <div class="placeholder instagram-placeholder">作品画像予定</div>
+        <div class="placeholder instagram-placeholder">作品画像予定</div>
+        <div class="placeholder instagram-placeholder">作品画像予定</div>
       </div>
-      <p class="section-link">
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram アカウントを見る →</a>
-      </p>
-    </section>
+      <p class="section-link"><a href="instagram.html">Instagram作品をもっと見る →</a></p>
+    </div>
 
-    <!-- ブログ -->
-    <section id="blog" class="page-section page-blog section-narrow">
+    <div class="home-block home-blog">
       <h2 class="section-heading">ブログ</h2>
-      <p class="section-lead">制作の裏側やイラストに込めた想いを綴っています。</p>
+      <p class="section-lead">最新の記事をピックアップしています。</p>
       <ul class="blog-list">
         <li>
-          <a href="#">
+          <a href="blog.html">
             <span class="blog-date">2026.06</span>
             <span class="blog-title">制作メモ：夏のイラストを描くまで</span>
           </a>
-          <p class="blog-excerpt">ラフ案から色付け、仕上げまでの流れをまとめました。（仮）</p>
         </li>
         <li>
-          <a href="#">
+          <a href="blog.html">
             <span class="blog-date">2026.03</span>
             <span class="blog-title">制作メモ：春のイラストを描くまで</span>
           </a>
-          <p class="blog-excerpt">色の選び方や、構図を決めるときのポイントについて。（仮）</p>
-        </li>
-        <li>
-          <a href="#">
-            <span class="blog-date">2026.01</span>
-            <span class="blog-title">展示参加レポート</span>
-          </a>
-          <p class="blog-excerpt">グループ展に参加したときの様子や感想を書きました。（仮）</p>
-        </li>
-        <li>
-          <a href="#">
-            <span class="blog-date">2025.11</span>
-            <span class="blog-title">連載イラスト制作の裏側</span>
-          </a>
-          <p class="blog-excerpt">Web 連載のイラスト制作で意識していることを紹介します。（仮）</p>
         </li>
       </ul>
-    </section>
+      <p class="section-link"><a href="blog.html">ブログをもっと見る →</a></p>
+    </div>
 
-    <!-- お仕事履歴 -->
-    <section id="works-history" class="page-section page-works-history section-wide">
-      <h2 class="section-heading">お仕事履歴</h2>
-      <p class="section-lead">これまでに携わったお仕事や制作実績です。</p>
-      <div class="works-history-list">
-        <article class="works-history-item">
-          <div class="placeholder work-placeholder">作品画像予定</div>
-          <h3>児童書籍 挿絵</h3>
-          <p>2025年 ─ 児童向け書籍の挿絵を担当しました。</p>
-        </article>
-        <article class="works-history-item">
-          <div class="placeholder work-placeholder">作品画像予定</div>
-          <h3>Web メディア 連載イラスト</h3>
-          <p>2024年 ─ 連載記事のイラストを制作しました。</p>
-        </article>
-        <article class="works-history-item">
-          <div class="placeholder work-placeholder">作品画像予定</div>
-          <h3>オリジナルグッズ デザイン</h3>
-          <p>2023年 ─ キャラクターグッズのイラストを制作しました。</p>
-        </article>
-        <article class="works-history-item">
-          <div class="placeholder work-placeholder">作品画像予定</div>
-          <h3>個展「小さな旅」</h3>
-          <p>2022年 ─ オリジナルイラストの個展を開催しました。</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- お問い合わせ -->
-    <section id="contact" class="page-section page-contact section-narrow">
+    <div class="home-block home-contact">
       <h2 class="section-heading">お問い合わせ</h2>
       <p class="section-lead">イラストのご依頼・ご相談はお気軽にどうぞ。</p>
-      <form class="contact-form" action="#" method="post">
-        <p>
-          <label for="name">お名前</label>
-          <input type="text" id="name" name="name">
-        </p>
-        <p>
-          <label for="email">メールアドレス</label>
-          <input type="email" id="email" name="email">
-        </p>
-        <p>
-          <label for="message">メッセージ</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-        </p>
-        <p>
-          <button type="submit">送信</button>
-        </p>
-      </form>
-    </section>
+      <p class="section-link"><a href="contact.html">お問い合わせフォームへ →</a></p>
+    </div>
 
   </main>
 
