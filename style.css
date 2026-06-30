@@ -115,7 +115,7 @@ nav a.nav-current {
 
 .main-visual-placeholder {
   width: 100%;
-  height: 300px;
+  height: 320px;
 }
 
 .deco-placeholder {
@@ -181,7 +181,7 @@ main {
 
 .section-lead,
 .page-lead {
-  margin: 0 0 2rem;
+  margin: 0 0 1.5rem;
   font-size: 0.88rem;
   color: var(--text-muted);
 }
@@ -238,25 +238,121 @@ main {
    ホーム
    ======================================== */
 
-.home-hero {
+.home-page {
+  padding-top: 2rem;
+}
+
+/* ① メインビジュアル */
+.home-mv {
   margin-bottom: 4rem;
 }
 
+.home-mv-figure {
+  margin: 0;
+}
+
+.home-mv-image,
+.main-visual-placeholder {
+  width: 100%;
+  height: 320px;
+  display: block;
+  object-fit: cover;
+}
+
+/* プロフィール詳細 */
+.home-profile-detail {
+  margin-bottom: 4rem;
+}
+
+.profile-intro {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-profile-detail .profile-image-placeholder {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 1.8rem;
+  border-radius: 50%;
+}
+
+.home-profile-detail .profile-text p {
+  margin: 0 0 1.2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.home-profile-detail .profile-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ② サイト案内カード */
+.home-guide {
+  margin-bottom: 5rem;
+}
+
+.guide-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.guide-card-link {
+  display: block;
+  padding: 1.8rem 1.2rem;
+  text-align: center;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.guide-card-link:hover {
+  color: var(--text);
+  text-decoration: none;
+  border-color: var(--accent-light);
+  background-color: #fafafa;
+}
+
+.guide-icon-placeholder {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+}
+
+.guide-card-title {
+  margin: 0 0 0.6rem;
+  font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.guide-card-text {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.guide-card-more {
+  font-size: 0.82rem;
+  color: var(--accent);
+}
+
+/* ③〜⑤ コンテンツセクション */
 .home-sections {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 5rem;
 }
 
 .home-section {
   width: 100%;
-}
-
-.home-col-text {
-  margin: 0 0 1rem;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.8;
 }
 
 .home-blog-list li:last-child {
@@ -265,8 +361,7 @@ main {
 
 .thumb-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.6rem;
+  gap: 1rem;
 }
 
 .thumb-row-3 {
@@ -508,7 +603,6 @@ main {
     gap: 0.6rem;
   }
 
-  .home-hero,
   .page-layout {
     grid-template-columns: 1fr;
   }
@@ -522,12 +616,53 @@ main {
     height: 120px;
   }
 
-  .thumb-row {
-    grid-template-columns: repeat(2, 1fr);
+  .home-page {
+    padding-top: 1.5rem;
   }
 
-  .home-works-list {
+  .home-mv {
+    margin-bottom: 3rem;
+  }
+
+  .home-mv-image,
+  .main-visual-placeholder {
+    height: 220px;
+  }
+
+  .home-profile-detail {
+    margin-bottom: 3rem;
+  }
+
+  .home-guide {
+    margin-bottom: 3.5rem;
+  }
+
+  .guide-cards {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .guide-card-link {
+    padding: 1.5rem 1rem;
+  }
+
+  .home-sections {
+    gap: 3.5rem;
+  }
+
+  .section-heading {
+    font-size: 0.9rem;
+  }
+
+  .section-lead {
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .thumb-row-3,
+  .home-works-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
   }
 
   .profile-row {
@@ -539,9 +674,5 @@ main {
   .works-history-list,
   .gallery-instagram {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .main-visual-placeholder {
-    height: 220px;
   }
 }
