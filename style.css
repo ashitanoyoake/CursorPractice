@@ -58,7 +58,7 @@ a:hover {
 }
 
 .site-logo span {
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   letter-spacing: 0.12em;
   line-height: 1.5;
 }
@@ -244,19 +244,18 @@ main {
 
 /* ① メインビジュアル */
 .home-mv {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .home-mv-figure {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 85%;
 }
 
-.home-mv-image,
-.main-visual-placeholder {
+.home-mv-image {
   width: 100%;
-  height: 320px;
+  height: auto;
   display: block;
-  object-fit: cover;
 }
 
 /* プロフィール詳細 */
@@ -621,12 +620,7 @@ main {
   }
 
   .home-mv {
-    margin-bottom: 3rem;
-  }
-
-  .home-mv-image,
-  .main-visual-placeholder {
-    height: 220px;
+    margin-bottom: 2rem;
   }
 
   .home-profile-detail {
