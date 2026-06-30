@@ -1,183 +1,299 @@
 /* ========================================
-   全体の基本設定
+   基本設定
    ======================================== */
 
 body {
   margin: 0;
-  background-color: #eceff1; /* 明るいグレー */
-  color: #333;
+  background-color: #ffffff;
+  color: #3a3a3a;
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  line-height: 1.7;
+  font-weight: 300;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
 }
 
 a {
-  color: #1565c0;
+  color: #3a3a3a;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #8b7355;
 }
 
 
 /* ========================================
-   ヘッダー（ダーク系）
+   ヘッダー（ロゴ左・ナビ右）
    ======================================== */
 
-header {
-  background-color: #1a1a2e;
-  color: #ffffff;
-  text-align: center;
-  padding: 2.5rem 1rem;
-}
-
-header h1 {
-  margin: 0 0 0.5rem;
-  font-size: 2rem;
-  letter-spacing: 0.05em;
-}
-
-header p {
-  margin: 0;
-  opacity: 0.85;
-}
-
-header button {
-  margin-top: 1.2rem;
-  background-color: #c9a227; /* ゴールド系アクセント */
-  color: #1a1a2e;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-header button:hover {
-  background-color: #ddb52e;
-}
-
-
-/* ========================================
-   ナビゲーション（横並び）
-   ======================================== */
-
-nav {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-bottom: 1px solid #cfd8dc;
+.site-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 0;
 }
 
-nav h2 {
-  margin: 0;
-  font-size: 1rem;
-  color: #555;
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #3a3a3a;
+}
+
+.site-logo:hover {
+  color: #3a3a3a;
+  text-decoration: none;
+}
+
+.site-logo span {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
 }
 
 nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 nav a {
-  display: block;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  color: #1565c0;
-  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: #666;
 }
 
 nav a:hover {
-  background-color: #e3f2fd;
+  color: #8b7355;
   text-decoration: none;
 }
 
 
 /* ========================================
-   メインコンテンツ
+   プレースホルダー
+   ======================================== */
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  color: #ccc;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+}
+
+.logo-placeholder {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.main-visual-placeholder {
+  width: 100%;
+  max-width: 640px;
+  height: 480px;
+  margin: 0 auto;
+}
+
+.work-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.instagram-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.profile-placeholder {
+  width: 160px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+
+/* ========================================
+   メインビジュアル
+   ======================================== */
+
+.hero {
+  padding: 5rem 2rem 6rem;
+  text-align: center;
+}
+
+
+/* ========================================
+   セクション共通
    ======================================== */
 
 main {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  padding-bottom: 6rem;
 }
-
-main hr {
-  display: none;
-}
-
-
-/* ========================================
-   各セクション（カード風）
-   ======================================== */
 
 section {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 7rem;
 }
 
-section h2 {
-  margin-top: 0;
-  color: #1a1a2e;
-  border-bottom: 2px solid #c9a227;
-  padding-bottom: 0.5rem;
-}
-
-section h3 {
-  color: #1565c0;
-  margin-bottom: 0.3rem;
-}
-
-
-/* ========================================
-   施工イメージ画像
-   ======================================== */
-
-figure {
-  text-align: center;
-  margin: 0 0 1.5rem;
-}
-
-figure img {
-  display: block;
-  width: 100%;
-  max-width: 600px;
-  height: 220px;
-  margin: 0 auto;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid #cfd8dc;
-}
-
-
-/* ========================================
-   施工事例（記事カード）
-   ======================================== */
-
-article {
-  background-color: #f5f7fa;
-  border-left: 4px solid #c9a227;
-  border-radius: 4px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-article:last-child {
+section:last-child {
   margin-bottom: 0;
+}
+
+.section-wide {
+  max-width: 1080px;
+  margin: 0 auto 7rem;
+  padding: 0 2rem;
+}
+
+.section-narrow {
+  max-width: 560px;
+  margin: 0 auto 7rem;
+  padding: 0 2rem;
+}
+
+.section-label {
+  margin: 0 0 2.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #aaa;
+  text-transform: lowercase;
+}
+
+.section-lead {
+  margin: -1.5rem 0 2.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.section-link {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+
+/* ========================================
+   作品ギャラリー
+   ======================================== */
+
+.gallery {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.gallery-works {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-original {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* ========================================
+   Instagram
+   ======================================== */
+
+.instagram-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+
+/* ========================================
+   ブログ
+   ======================================== */
+
+.blog-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-list li {
+  border-bottom: 1px solid #eee;
+}
+
+.blog-list a {
+  display: flex;
+  gap: 2rem;
+  padding: 1.2rem 0;
+  color: #3a3a3a;
+}
+
+.blog-list a:hover {
+  color: #8b7355;
+  text-decoration: none;
+}
+
+.blog-date {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.blog-title {
+  font-size: 0.9rem;
+}
+
+
+/* ========================================
+   プロフィール
+   ======================================== */
+
+.about-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.about-name {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+}
+
+.about-text p {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.about-text h3 {
+  margin: 3rem 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #aaa;
+  text-transform: lowercase;
+}
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history-list li {
+  display: flex;
+  gap: 2rem;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.history-list span {
+  flex-shrink: 0;
+  width: 3rem;
+  color: #aaa;
+  font-size: 0.85rem;
 }
 
 
@@ -185,44 +301,53 @@ article:last-child {
    お問い合わせフォーム
    ======================================== */
 
-input[type="text"],
-input[type="email"],
-textarea {
+.contact-form p {
+  margin: 0 0 2rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  max-width: 100%;
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #3a3a3a;
   box-sizing: border-box;
+  resize: vertical;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
-  border-color: #1565c0;
-  box-shadow: 0 0 0 2px #e3f2fd;
+  border-bottom-color: #8b7355;
 }
 
-label {
-  font-weight: bold;
-  color: #555;
-}
-
-button[type="submit"] {
-  background-color: #1565c0;
+.contact-form button {
+  display: block;
+  margin: 3rem auto 0;
+  padding: 0.7rem 3rem;
+  background-color: #3a3a3a;
   color: #ffffff;
   border: none;
-  padding: 0.7rem 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 6px;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  letter-spacing: 0.1em;
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: #0d47a1;
+.contact-form button:hover {
+  background-color: #8b7355;
 }
 
 
@@ -230,35 +355,61 @@ button[type="submit"]:hover {
    フッター
    ======================================== */
 
-body > hr {
-  display: none;
-}
-
 footer {
-  background-color: #1a1a2e;
-  color: #b0bec5;
   text-align: center;
-  padding: 1.5rem 1rem;
-  font-size: 0.9rem;
+  padding: 3rem 2rem 4rem;
+  font-size: 0.75rem;
+  color: #ccc;
+  letter-spacing: 0.08em;
 }
 
 footer p {
-  margin: 0.3rem 0;
-}
-
-footer a {
-  color: #c9a227;
+  margin: 0;
 }
 
 
 /* ========================================
-   リスト
+   スマホ対応
    ======================================== */
 
-ul {
-  padding-left: 1.5rem;
-}
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-top: 2rem;
+  }
 
-li {
-  margin-bottom: 0.3rem;
+  nav ul {
+    gap: 1.2rem;
+  }
+
+  .hero {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .main-visual-placeholder {
+    height: 280px;
+  }
+
+  .gallery-works,
+  .gallery-original {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instagram-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-layout {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .history-list li {
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: center;
+  }
 }
